@@ -80,14 +80,14 @@
 ## Роли (Roles)
 |имя поля | тип | ограничения | описание |
 |:---:|:---:|:---:|:---:|
-| id | PK | auto increment; not null; unique | первичный ключ |
-| name | VARCHAR(50) | not null | название роли |
-| permission | VARCHAR(128) | not null | право пользователя |
+| id | PK | AUTO INCREMENT, NOT NULL, UNIQUE | первичный ключ |
+| name | VARCHAR(50) |  NOT NULL | название роли |
+| permission | VARCHAR(128) | NOT NULL | право пользователя |
 
 ## Логи (Logs)
 |имя поля | тип | ограничения | описание |
 |:---:|:---:|:---:|:---:|
-| id | pk | auto increment; not null; unique | первичный ключ |
-| user | fk | not null | внешний ключ на пользователя |
-| type | VARCHAR(50) | not null | тип лога(CREATE/UPDATE/DELETE) |
-| representation | VARCHAR(255) | not null | строковое представление изменённого кортежа |
+| id | PK | AUTO INCREMENT, NOT NULL, UNIQUE | первичный ключ |
+| user | FK | NOT NULL | внешний ключ на пользователя |
+| type | VARCHAR(50) | NOT NULL | тип лога(CREATE/UPDATE/DELETE) |
+| representation | VARCHAR(255) | NOT NULL | строковое представление изменённого кортежа |
