@@ -36,6 +36,16 @@
 |album|FK|NULL|Внешний ключ на альбом Группы|
 |single_song|FK|NULL|Внешний ключ на сингл Группы|
 
+## Аккаунт администратора (Admin Account)
+|Имя поля|Тип|Ограничения|Описание|
+|:-----:|:--:|:---------:|:------:|
+|id|PK|AUTO INCREMENT, NOT NULL, UNIQUE|Первичный ключ|
+|name|VARCHAR(200)|NOT NULL|Имя админа|
+|nickname|VARCHAR(20)|NOT NULL, UNIQUE|Псевдоним|
+|date_of_birth|DATE|NOT NULL|Дата админа|
+|email|VARCHAR(100)|NOT NULL|Почта Посетителя|
+|password|VARCHAR(30)|NOT NULL|Пароль админа|
+
 ## Альбом (Album)
 |Имя поля|Тип|Ограничения|Описание|
 |:------:|:-:|:---------:|:------:|
