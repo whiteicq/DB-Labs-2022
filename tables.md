@@ -14,6 +14,7 @@
 |name|VARCHAR(200)|NOT NULL|ФИО Посетителя|
 |nickname|VARCHAR(20)|NOT NULL, UNIQUE|Псевдоним|
 |date_of_birth|DATE|NOT NULL|Дата рождения|
+|account|FK|NOT NULL|Внешний ключ на аккаунт|
 
 ## Артист (Artist)
 |Имя поля|Тип|Ограничения|Описание|
@@ -24,6 +25,7 @@
 |date_of_birth|DATE|NOT NULL|Дата рождения|
 |single_song|FK|NULL|Внешний ключ на сингл Артиста|
 |album|FK|NULL|Внешний ключ на альбом Артиста|
+|account|FK|NOT NULL|Внешний ключ на аккаунт|
 
 ## Группа (Group)
 |Имя поля|Тип|Ограничения|Описание|
@@ -35,6 +37,7 @@
 |number_of_artists|INT|NOT NULL|Количество артистов в группе|
 |album|FK|NULL|Внешний ключ на альбом Группы|
 |single_song|FK|NULL|Внешний ключ на сингл Группы|
+|account|FK|NOT NULL|Внешний ключ на аккаунт|
 
 ## Администратор (Admin)
 |Имя поля|Тип|Ограничения|Описание|
@@ -43,6 +46,7 @@
 name|VARCHAR(200)|NOT NULL|Имя|
 nickname|VARCHAR(20)|NOT NULL|Ник админа|
 date_of_birth|DATE|NOT NULL|Дата рождения
+|account|FK|NOT NULL|Внешний ключ на аккаунт|
 
 ## Альбом (Album)
 |Имя поля|Тип|Ограничения|Описание|
