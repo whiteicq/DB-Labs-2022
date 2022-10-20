@@ -75,18 +75,32 @@
 |number_of_sales|INT|NOT NULL|Число продаж для соответствия категории|
 
 ## Роли (Roles)
-|имя поля | тип | ограничения | описание |
+|Имя Поля | Тип | Ограничения | Описание |
 |:---:|:---:|:---:|:---:|
-| id | INT | PK, AUTO INCREMENT, NOT NULL, UNIQUE | первичный ключ |
-| title | VARCHAR(50) | NOT NULL | название роли |
+| id | INT | PK, AUTO INCREMENT, NOT NULL, UNIQUE | Первичный ключ |
+| title | VARCHAR(50) | NOT NULL | Название роли |
+
+## Права (Permissions)
+|Имя поля|Тип|Ограничения|Описание|
+|:------:|:-:|:---------:|:------:|
+|id|INT|PK, AUTO INCREMENT, NOT NULL, UNIQUE|Первичный ключ|
+|title|VARCHAR(50)|NOT NULL|Название роли|
+
+## Роли и Права (Roles & Permissions)
+|Имя поля|Тип|Ограничения|Описание|
+|:------:|:-:|:---------:|:------:|
+|id|INT|PK, AUTO INCREMENT, NOT NULL, UNIQUE|Первичный ключ|
+|role_id|INT|FK, NOT NULL|Внешний ключ на Роль|
+|permission_id|INT|FK, NOT NULL|Внешний ключ на Право|
 
 ## Логи (Logs)
 |имя поля | тип | ограничения | описание |
 |:---:|:---:|:---:|:---:|
 | id | INT | AUTO INCREMENT, NOT NULL,  UNIQUE | Первичный ключ |
-| admin_id | INT | FK, NOT NULL | внешний ключ на админа |
-| type | VARCHAR(50) | not null | тип лога(CREATE/UPDATE/DELETE) |
-| representation | VARCHAR(255) | not null | строковое представление изменённого кортежа |
+| account_id | INT | FK, NOT NULL | внешний ключ на Аккаунт |
+| type | VARCHAR(50) | NOT NULL | тип лога(CREATE/UPDATE/DELETE) |
+| representation | VARCHAR(255) | NOT NULL | строковое представление изменённого кортежа |
+|date_of_create|DATE|NOT NULL|Дата создания|
 
 ## Артист и Песня (Artist & Song)
 |имя поля | тип | ограничения | описание |
