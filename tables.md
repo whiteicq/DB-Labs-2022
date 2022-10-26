@@ -51,16 +51,6 @@
 |title|VARCHAR(100)|NOT NULL|Название песни|
 |date_of_writing|DATE|NOT NULL|Дата записи песни|
 
-## Администратор (Admin)
-|Имя поля|Тип|Ограничения|Описание|
-|:-----:|:--:|:---------:|:------:|
-|id|INT|PK, AUTO INCREMENT, NOT NULL, UNIQUE|Первичный ключ|
-|name|VARCHAR(200)|NOT NULL|Имя|
-|nickname|VARCHAR(20)|NOT NULL|Ник админа|
-|date_of_birth|DATE|NOT NULL|Дата рождения
-|account_id|INT|FK, NOT NULL|Внешний ключ на аккаунт|
-|log_id|INT|FK, NOT NULL|Внешний ключ на логи|
-
 ## Альбом (Album)
 |Имя поля|Тип|Ограничения|Описание|
 |:------:|:-:|:---------:|:------:|
