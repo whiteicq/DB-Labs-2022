@@ -1,3 +1,5 @@
+USE MusicService
+
 CREATE TABLE Roles
 (
 	Id INT PRIMARY KEY IDENTITY,
@@ -45,7 +47,6 @@ CREATE TABLE Artists
 	Alias VARCHAR(100) NULL,
 	Date_of_birth DATE NOT NULL,
 	Account_id INT NOT NULL
-	FOREIGN KEY (Account_id) REFERENCES Accounts(Id) ON DELETE CASCADE
 )
 
 CREATE TABLE Groups
@@ -55,7 +56,17 @@ CREATE TABLE Groups
 	Founding_date DATE NOT NULL,
 	Number_of_artist INT NOT NULL,
 	Account_id INT NOT NULL
-	FOREIGN KEY (Account_id) REFERENCES Accounts(Id) ON DELETE CASCADE
+)
+
+CREATE TABLE Related_accounts
+(
+	Id INT PRIMARY KEY IDENTITY,
+	Account_id INT NOT NULL UNIQUE,
+	Artist_id INT UNIQUE, 
+	Group_id INT UNIQUE,
+	FOREIGN KEY (Artist_id) REFERENCES Artists(Id) ON DELETE CASCADE,
+	FOREIGN KEY (Group_id) REFERENCES Groups(Id) ON DELETE CASCADE,
+	FOREIGN KEY (Account_id) REFERENCES Accounts(Id) ON DELETE CASCADE,
 )
 
 CREATE TABLE Songs
@@ -63,16 +74,6 @@ CREATE TABLE Songs
 	Id INT PRIMARY KEY IDENTITY,
 	Title VARCHAR(100) NOT NULL,
 	Date_of_writing DATE NOT NULL
-)
-
-CREATE TABLE Admins
-(
-	Id INT PRIMARY KEY IDENTITY,
-	Name VARCHAR(200) NOT NULL,
-	Nickname VARCHAR(20) NOT NULL,
-	Date_of_birth DATE NOT NULL,
-	Account_id INT NOT NULL,
-	FOREIGN KEY (Account_id) REFERENCES Accounts(Id) ON DELETE CASCADE,
 )
 
 CREATE TABLE Albums
@@ -92,7 +93,7 @@ CREATE TABLE Sertifications
 (
 	Id INT PRIMARY KEY IDENTITY,
 	Title VARCHAR(100) NOT NULL,
-	Number_of_sales INT NOT NULL
+	Number_of_sales INT NOT NULL CHECK(Number_of_sales >= 0)
 )
 
 CREATE TABLE Logs
