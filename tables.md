@@ -30,11 +30,19 @@
 ## Группа (Group)
 |Имя поля|Тип|Ограничения|Описание|
 |:-----:|:--:|:---------:|:------:|
-|id|PK|AUTO INCREMENT, NOT NULL, UNIQUE|Первичный ключ|
+|id|INT|PK, AUTO INCREMENT, NOT NULL, UNIQUE|Первичный ключ|
 |title|VARCHAR(100)|NOT NULL|Название группы|
 |founding_date|DATE|NOT NULL|Дата основания|
 |number_of_artists|INT|NOT NULL|Количество артистов в группе|
 |account_id|INT|FK, NOT NULL|Внешний ключ на аккаунт|
+
+## Связанные Аккаунты (Related Accounts)
+|Имя поля|Тип|Ограничения|Описание|
+|:-----:|:--:|:---------:|:------:|
+|id|INT|PK, AUTO INCREMENT, NOT NULL, UNIQUE|Первичный ключ|
+|Account_id|INT|FK, NOT NULL, UNIQUE|Внешний ключ на Аккаунт|
+|Artist_id|INT|FK, NOT NULL, UNIQUE|Внешний ключ на Артиста|
+|Group_id|INT|FK, NOT NULL, UNIQUE|Внешний ключ на Группу|
 
 ## Песня (Single Song)
 |Имя поля|Тип|Ограничения|Описание|
