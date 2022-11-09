@@ -54,7 +54,7 @@ INSERT INTO Artists (Name, Alias, Date_of_birth, Account_id) VALUES ('Mick Ward'
 
 INSERT INTO Groups (Title, Founding_date, Number_of_artist, Account_id) VALUES ('Wet Desert', '2020-01-01', 2, 6)
 
-/*Missing related_acc*/
+INSERT INTO Related_accounts (Account_id, Artist_id, Group_id) VALUES (4, 1, 1)
 
 INSERT INTO Songs (Title, Date_of_writing) VALUES ('Dead Cops', '2021-10-23')
 INSERT INTO Songs (Title, Date_of_writing) VALUES ('Alcohol & Drugs', '2021-10-27')
@@ -73,7 +73,13 @@ INSERT INTO Sertifications (Title, Number_of_sales) VALUES ('Gold', 500000)
 INSERT INTO Sertifications (Title, Number_of_sales) VALUES ('Platinum', 1000000)
 INSERT INTO Sertifications (Title, Number_of_sales) VALUES ('Diamond', 10000000)
 
-/*missing Logs*/
+INSERT INTO Logs (Type, Representation, Date_of_create, Account_id) VALUES 
+(
+	'CREATE',
+	'Some action',
+	'2022-10-26',
+	1
+)
 
 INSERT INTO Artists_Songs (Artist_id, Song_id) VALUES (1, 1)
 INSERT INTO Artists_Songs (Artist_id, Song_id) VALUES (1, 2)
@@ -103,7 +109,7 @@ INSERT INTO Groups_Albums (Group_id, Album_id) VALUES (1, 3)
 INSERT INTO Groups_Artists (Group_id, Artist_id) VALUES (1, 1)
 INSERT INTO Groups_Artists (Group_id, Artist_id) VALUES (1, 2)
 
-INSERT INTO Albums_Sertifications (Album_id, Sertification_id) VALUES (1, null)
+INSERT INTO Albums_Sertifications (Album_id, Sertification_id) VALUES (1, 1)
 
 INSERT INTO Songs_Sertifications (Song_id, Sertification_id) VALUES (5, 2)
 INSERT INTO Songs_Sertifications (Song_id, Sertification_id) VALUES (5, 1)

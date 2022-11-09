@@ -1,0 +1,24 @@
+USE MusicService
+
+DELETE Accounts
+DELETE Albums
+DELETE Albums_Genres
+DELETE Albums_Sertifications
+DELETE Artists
+DELETE Artists_Albums
+DELETE Artists_Songs
+DELETE Genres
+DELETE Groups
+DELETE Groups_Albums
+DELETE Groups_Artists
+DELETE Groups_Songs
+DELETE Logs
+DELETE Permission
+DELETE Related_accounts
+DELETE Roles
+DELETE Roles_Permissions
+DELETE Sertifications
+DELETE Songs
+DELETE Songs_Genres
+DELETE Songs_Sertifications
+DELETE Visitors
