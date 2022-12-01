@@ -99,11 +99,9 @@ CREATE TABLE Sertifications
 CREATE TABLE Logs
 (
 	Id INT PRIMARY KEY IDENTITY,
-	Type VARCHAR(100) NOT NULL,
+	Entity_Id INT NOT NULL,
 	Representation VARCHAR(255) NOT NULL,
-	Date_of_create DATE NOT NULL,
-	Account_id INT NOT NULL,
-	FOREIGN KEY (Account_id) REFERENCES Accounts(Id)
+	Date_of_create DATE NOT NULL DEFAULT GETDATE()
 )
 
 CREATE TABLE Artists_Songs

@@ -78,6 +78,7 @@ INSERT INTO Songs (Title, Date_of_writing) VALUES ('Pain Remains', '2022-10-04')
 INSERT INTO Songs (Title, Date_of_writing) VALUES ('Puppet Master', '2017-11-04')
 INSERT INTO Songs (Title, Date_of_writing) VALUES ('Son of Misery', '2017-11-07')
 INSERT INTO Songs (Title, Date_of_writing) VALUES ('Dear Desolation', '2017-12-01')
+INSERT INTO Songs (Title, Date_of_writing) VALUES ('SONG', '2020-01-01')
 
 INSERT INTO Albums (Title, Date_of_writing) VALUES ('Bloody Murder', '2022-11-11')
 INSERT INTO Albums (Title, Date_of_writing) VALUES ('MVP', '2022-12-10')
@@ -93,13 +94,6 @@ INSERT INTO Sertifications (Title, Number_of_sales) VALUES ('Gold', 500000)
 INSERT INTO Sertifications (Title, Number_of_sales) VALUES ('Platinum', 1000000)
 INSERT INTO Sertifications (Title, Number_of_sales) VALUES ('Diamond', 10000000)
 
-INSERT INTO Logs (Type, Representation, Date_of_create, Account_id) VALUES 
-(
-	'CREATE',
-	'Some action',
-	'2022-10-26',
-	1
-)
 
 INSERT INTO Artists_Songs (Artist_id, Song_id) VALUES (1, 1)
 INSERT INTO Artists_Songs (Artist_id, Song_id) VALUES (1, 2)
