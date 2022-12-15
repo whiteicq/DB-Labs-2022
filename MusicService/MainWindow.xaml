@@ -1,0 +1,14 @@
+﻿<Window x:Class="MusicService.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicService"
+        mc:Ignorable="d"
+        Title="Shpotify" Height="450" Width="800"
+        >
+    <Grid>
+        <Button x:Name="RegisterButton" Content="Зарегистрироваться" Margin="315,131,315,242" Click="RegisterButton_Click"/>
+        <Button x:Name="LogIn" Content="Войти" Margin="315,238,315,140" Click="LogIn_Click" />
+    </Grid>
+</Window>

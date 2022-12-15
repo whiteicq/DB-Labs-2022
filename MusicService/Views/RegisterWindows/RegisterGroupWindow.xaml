@@ -1,0 +1,22 @@
+﻿<Window x:Class="MusicService.Views.RegisterGroupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicService.Views"
+        mc:Ignorable="d"
+        Title="RegisterGroupWindow" Height="450" Width="800">
+    <Grid>
+        <TextBlock Text="Почта" Margin="25,45,674,333"/>
+        <TextBox x:Name="EmailTextBox" Margin="25,64,601,327"/>
+        <TextBlock Text="Пароль" Margin="25,112,690,281"/>
+        <PasswordBox x:Name="PasswordTextBox" PasswordChar="*" Margin="25,132,601,266"/>
+        <TextBlock Text="Название группы" Margin="335,43,329,348"/>
+        <TextBox x:Name="TitleTextBox" Margin="335,65,291,327" />
+        <TextBlock Text="Количество участников" Margin="335,115,332,284" />
+        <TextBox x:Name="NumberOfArtistTextBox" Text="0" Margin="335,133,291,266" />
+        <TextBlock Text="Дата основания" Margin="335,184,368,217" />
+        <TextBox x:Name="FoundingDateTextBox" Margin="335,201,291,191"/>
+        <Button Content="Создать группу" Margin="319,312,352,77" Click="Button_Click"/>
+    </Grid>
+</Window>

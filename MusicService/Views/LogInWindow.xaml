@@ -1,0 +1,16 @@
+﻿<Window x:Class="MusicService.Views.LogInWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicService.Views"
+        mc:Ignorable="d"
+        Title="Вход" Height="450" Width="800">
+    <Grid>
+        <TextBlock Text="Почта" Margin="274,79,425,299"/>
+        <TextBox x:Name="EmailTextBox" Margin="274,98,352,293"/>
+        <TextBlock Text="Пароль" Margin="274,146,441,247"/>
+        <PasswordBox x:Name="PasswordTextBox" PasswordChar="*" Margin="274,166,352,225"/>
+        <Button Content="Войти" Margin="296,269,374,120"/>
+    </Grid>
+</Window>

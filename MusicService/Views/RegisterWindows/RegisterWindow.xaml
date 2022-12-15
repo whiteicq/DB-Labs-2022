@@ -1,0 +1,25 @@
+﻿<Window x:Class="MusicService.Views.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicService.Views"
+        mc:Ignorable="d"
+        Title="Регистрация" Height="450" Width="800">
+    <Grid>
+        <TextBlock Text="Почта" Margin="25,45,674,333"/>
+        <TextBox x:Name="EmailTextBox" Margin="25,64,601,327"/>
+        <TextBlock Text="Пароль" Margin="25,112,690,281"/>
+        <PasswordBox x:Name="PasswordTextBox" PasswordChar="*" Margin="25,132,601,259"/>
+        <TextBlock Text="Имя" Margin="335,43,407,348"/>
+        <TextBox x:Name="NameTextBox" Margin="335,65,291,327" />
+        <TextBlock Text="Псевдоним" Margin="335,115,376,284" />
+        <TextBox x:Name="AliasTextBox" Margin="335,132,291,260" />
+        <TextBlock Text="Дата рождения" Margin="335,184,368,217" />
+        <TextBox x:Name="DateBirthTextBox" Margin="335,201,291,191"/>
+
+        <Button Content="Создать посетителя" Margin="243,320,427,69" Click="Button_Click"/>
+        <Button Content="Создать группу" Margin="609,62,61,327" Click="Button_Click_2"/>
+        <Button Content="Создать артиста" Margin="400,320,270,69" Click="Button_Click_1"/>
+    </Grid>
+</Window>
